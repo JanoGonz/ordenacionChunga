@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=JugadorBaloncesto
+comment1.params=nombre\ altura\ nacimiento\ jugadorNba\ id
+comment1.target=JugadorBaloncesto(java.lang.String,\ int,\ java.lang.String,\ boolean,\ int)
+comment10.params=
+comment10.target=java.lang.String\ caracteristicas()
+comment2.params=
+comment2.target=java.lang.String\ getNombreJugador()
+comment3.params=
+comment3.target=int\ getAlturaJugador()
+comment4.params=
+comment4.target=java.time.LocalDate\ getFechaNacimiento()
+comment5.params=
+comment5.target=java.lang.String\ getJuegaNba()
+comment6.params=nombre
+comment6.target=void\ setNombre(java.lang.String)
+comment7.params=altura
+comment7.target=void\ setAlturaJugador(int)
+comment8.params=nacimiento
+comment8.target=void\ setFechaNacimiento(java.lang.String)
+comment9.params=jugadorNba
+comment9.target=void\ setJuegaNba(boolean)
+numComments=11
