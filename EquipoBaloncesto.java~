@@ -16,7 +16,15 @@ public class EquipoBaloncesto
     public String getListadoJugadores(){
         String listaADevolver = "";
         for (JugadorBaloncesto jugador : jugadores){
-            listaADevolver = jugador.getCaracteristicas() + "\n";
+            listaADevolver += jugador.getCaracteristicas() + "\n";
+        }
+        return listaADevolver;
+    }
+    
+    public String getListadoJugadoresEnFuncionDeAltura(){
+        String listaADevolver = "";
+        for (JugadorBaloncesto jugador : jugadores){
+            listaADevolver += jugador.getAlturaJugador() + "\n";
         }
         return listaADevolver;
     }

@@ -39,7 +39,7 @@ public class EquipoBaloncestoTest
     }
 
     @Test
-    public void caracteristicas()
+    public void añadirJugadores()
     {
         EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
         equipoBa2.añadirJugador("LeBron", 206, "1987-09-12", true, 1);
@@ -47,6 +47,15 @@ public class EquipoBaloncestoTest
         equipoBa3.añadirJugador("Kyrie", 193, "1990-04-21", true, 2);
         EquipoBaloncesto equipoBa4 = new EquipoBaloncesto();
         equipoBa4.añadirJugador("Llul", 190, "1988-02-03", false, 3);
+    }
+
+    @Test
+    public void getListadoJugadores()
+    {
+        EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
+        equipoBa2.añadirJugador("LeBron", 206, "1988-04-24", true, 4);
+        equipoBa2.añadirJugador("Giannis", 213, "1990-12-08", true, 5);
+        assertEquals("LeBron 206 1988-04-24 Sí juega en la NBA 4\nGiannis 213 1990-12-08 Sí juega en la NBA 5\n",   equipoBa2.getListadoJugadores());
     }
 }
 

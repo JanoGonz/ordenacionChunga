@@ -6,4 +6,6 @@ comment2.params=nombre\ altura\ nacimiento\ jugadorNba\ id
 comment2.target=void\ a\u00F1adirJugador(java.lang.String,\ int,\ java.lang.String,\ boolean,\ int)
 comment3.params=
 comment3.target=java.lang.String\ getListadoJugadores()
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ getListadoJugadoresEnFuncionDeSuAltura()
+numComments=5

@@ -39,7 +39,7 @@ public class EquipoBaloncestoTest
     }
 
     @Test
-    public void caracteristicas()
+    public void añadirJugadores()
     {
         EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
         equipoBa2.añadirJugador("LeBron", 206, "1987-09-12", true, 1);
@@ -50,12 +50,21 @@ public class EquipoBaloncestoTest
     }
 
     @Test
-    public void ListadoJugadores()
+    public void getListadoJugadores()
     {
         EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
         equipoBa2.añadirJugador("LeBron", 206, "1988-04-24", true, 4);
         equipoBa2.añadirJugador("Giannis", 213, "1990-12-08", true, 5);
-        assertEquals("LeBron 206 1988-04-24 Sí juega en la NBA 4\nGiannis 213 1990-12-08 Sí juega en la NBA 5\n", equipoBa2.getListadoJugadores());
+        assertEquals("LeBron 206 1988-04-24 Sí juega en la NBA 4\nGiannis 213 1990-12-08 Sí juega en la NBA 5\n",   equipoBa2.getListadoJugadores());
+    }
+
+    @Test
+    public void getListadoJugadoresEnFuncionDeSuAltura()
+    {
+        EquipoBaloncesto equipoBa1 = new EquipoBaloncesto();
+        equipoBa1.añadirJugador("LeBron", 206, "1988-04-24", true, 4);
+        equipoBa1.añadirJugador("Giannis", 213, "1990-12-08", true, 6);
+        assertEquals("206\n213\n", equipoBa1.getListadoJugadoresEnFuncionDeSuAltura());
     }
 }
 

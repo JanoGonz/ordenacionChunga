@@ -20,4 +20,12 @@ public class EquipoBaloncesto
         }
         return listaADevolver;
     }
+    
+    public String getListadoJugadoresEnFuncionDeSuAltura(){
+        String listaADevolver = "";
+        for (JugadorBaloncesto jugador : jugadores){
+            listaADevolver += jugador.getAlturaJugador() + "\n";
+        }
+        return listaADevolver;
+    }
 }
