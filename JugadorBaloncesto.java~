@@ -55,11 +55,11 @@ public class JugadorBaloncesto
         juegaNba = jugadorNba;
     }
 
-    public String caracteristicas(){
+    public String getCaracteristicas(){
         String caracteristicasADevolver = getNombreJugador() + " " +
-                                          getAlturaJugador() + " " +
-                                          getFechaNacimiento() + " " +
-                                          getJuegaNba() + " " + idJugador;
+            getAlturaJugador() + " " +
+            getFechaNacimiento() + " " +
+            getJuegaNba() + " " + idJugador + "\n";
         return caracteristicasADevolver;
     }
 }
