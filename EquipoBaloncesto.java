@@ -35,20 +35,19 @@ public class EquipoBaloncesto
         int contadorLento = 1;
         while(contadorLento < jugadoresOrdenados.size()){
             int contadorRapido = contadorLento -1;
-            int posicionMenor = 0;
+            int posicionMayor = 0;
             boolean ordenar = false;
-            while(contadorRapido >= 0){
-                if(jugadoresOrdenados.get(contadorLento).getFechaNacimiento().isBefore(jugadoresOrdenados.get(contadorRapido).getFechaNacimiento())){
-                    posicionMenor = contadorRapido;
+            while(!ordenar && contadorRapido >= 0){
+               posicionMayor = 0;
+               if(!jugadoresOrdenados.get(contadorLento).getFechaNacimiento().isBefore(jugadoresOrdenados.get(contadorRapido).getFechaNacimiento())){
                     ordenar = true;
-                }
-                contadorRapido--;
+                    posicionMayor = contadorRapido+1;
+               }
+               contadorRapido--;
             }
-            if (ordenar) {
-                JugadorBaloncesto aux = jugadoresOrdenados.get(contadorLento);
-                jugadoresOrdenados.remove(contadorLento);
-                jugadoresOrdenados.add(posicionMenor, aux);
-            }
+            JugadorBaloncesto aux = jugadoresOrdenados.get(contadorLento);
+            jugadoresOrdenados.remove(contadorLento);
+            jugadoresOrdenados.add(posicionMayor, aux);
             contadorLento++;
         }
 
