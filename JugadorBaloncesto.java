@@ -8,12 +8,11 @@ public class JugadorBaloncesto
     private boolean juegaNba;
     private int idJugador;
 
-    public JugadorBaloncesto(String nombre, int altura, String nacimiento, boolean jugadorNba, int id){
+    public JugadorBaloncesto(String nombre, int altura, String nacimiento, boolean jugadorNba, int idJugador){
         nombreJugador = nombre;
         alturaJugador = altura;
         fechaNacimiento = LocalDate.parse(nacimiento);
         juegaNba = jugadorNba;
-        idJugador = id;
     }
 
     public String getNombreJugador(){

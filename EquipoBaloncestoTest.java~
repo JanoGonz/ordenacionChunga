@@ -1,3 +1,5 @@
+
+
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -41,21 +43,19 @@ public class EquipoBaloncestoTest
     @Test
     public void añadirJugadores()
     {
-        EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
-        equipoBa2.añadirJugador("LeBron", 206, "1987-09-12", true, 1);
-        EquipoBaloncesto equipoBa3 = new EquipoBaloncesto();
-        equipoBa3.añadirJugador("Kyrie", 193, "1990-04-21", true, 2);
-        EquipoBaloncesto equipoBa4 = new EquipoBaloncesto();
-        equipoBa4.añadirJugador("Llul", 190, "1988-02-03", false, 3);
+        EquipoBaloncesto equipoBa1 = new EquipoBaloncesto();
+        equipoBa1.añadirJugador("LeBron", 206, "1989-09-12", true);
+        equipoBa1.añadirJugador("Kyrie", 198, "1990-01-26", true);
     }
 
     @Test
     public void getListadoJugadores()
     {
-        EquipoBaloncesto equipoBa2 = new EquipoBaloncesto();
-        equipoBa2.añadirJugador("LeBron", 206, "1988-04-24", true, 4);
-        equipoBa2.añadirJugador("Giannis", 213, "1990-12-08", true, 5);
-        assertEquals("LeBron 206 1988-04-24 Sí juega en la NBA 4\nGiannis 213 1990-12-08 Sí juega en la NBA 5\n",   equipoBa2.getListadoJugadores());
+        EquipoBaloncesto equipoBa1 = new EquipoBaloncesto();
+        equipoBa1.añadirJugador("LeBron", 206, "1989-09-12", true);
+        equipoBa1.añadirJugador("Kyrie", 198, "1990-01-26", true);
+        assertEquals("LeBron 206 1989-09-12 Sí juega en la NBA 0\nKyrie 198 1990-01-26 Sí juega en la NBA 0\n", equipoBa1.getListadoJugadores());
     }
 }
+
 

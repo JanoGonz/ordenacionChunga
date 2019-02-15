@@ -15,5 +15,5 @@ comment4.target=void\ a\u00F1adirJugadores()
 comment5.params=
 comment5.target=void\ getListadoJugadores()
 comment6.params=
-comment6.target=void\ getListadoJugadoresEnFuncionDeSuAltura()
+comment6.target=void\ getListadoJugadoresEnFuncionDeSuNacimiento()
 numComments=7

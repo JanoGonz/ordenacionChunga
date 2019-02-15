@@ -13,7 +13,6 @@ public class JugadorBaloncesto
         alturaJugador = altura;
         fechaNacimiento = LocalDate.parse(nacimiento);
         juegaNba = jugadorNba;
-        idJugador = id;
     }
 
     public String getNombreJugador(){
@@ -59,7 +58,7 @@ public class JugadorBaloncesto
         String caracteristicasADevolver = getNombreJugador() + " " +
             getAlturaJugador() + " " +
             getFechaNacimiento() + " " +
-            getJuegaNba() + " " + idJugador + "\n";
+            getJuegaNba() + " " + idJugador;
         return caracteristicasADevolver;
     }
 }
