@@ -28,22 +28,27 @@ public class EquipoBaloncesto
 
     public String getListadoJugadoresEnFuncionDeSuNacimiento(){
         String listaJugadoresOrdenada = "";
-        ArrayList<JugadorBaloncesto> jugadoresOrdenados = new ArrayList<JugadorBaloncesto>(jugadores);	
-        int contadorLento = 0;
+        ArrayList<JugadorBaloncesto> jugadoresOrdenados = new ArrayList<JugadorBaloncesto>();   
+        for (JugadorBaloncesto jugador: jugadores) {
+            jugadoresOrdenados.add(jugador);
+        }
+        int contadorLento = 1;
         while(contadorLento < jugadoresOrdenados.size()){
-            JugadorBaloncesto jugadorMenor = jugadoresOrdenados.get(contadorLento);
-            int posicionMenor = contadorLento;
-            int contadorRapido = contadorLento + 1;
-            while(contadorRapido < jugadoresOrdenados.size()){
-                if(jugadoresOrdenados.get(contadorRapido).getFechaNacimiento().isBefore(jugadorMenor.getFechaNacimiento())){
-                    jugadorMenor = jugadoresOrdenados.get(contadorRapido);
+            int contadorRapido = contadorLento -1;
+            int posicionMenor = 0;
+            boolean ordenar = false;
+            while(contadorRapido >= 0){
+                if(jugadoresOrdenados.get(contadorLento).getFechaNacimiento().isBefore(jugadoresOrdenados.get(contadorRapido).getFechaNacimiento())){
                     posicionMenor = contadorRapido;
+                    ordenar = true;
                 }
-                contadorRapido++;
+                contadorRapido--;
             }
-            JugadorBaloncesto jugadorIntermedio = jugadoresOrdenados.get(contadorLento);
-            jugadoresOrdenados.set(contadorLento, jugadorMenor);
-            jugadoresOrdenados.set(posicionMenor, jugadorIntermedio);
+            if (ordenar) {
+                JugadorBaloncesto aux = jugadoresOrdenados.get(contadorLento);
+                jugadoresOrdenados.remove(contadorLento);
+                jugadoresOrdenados.add(posicionMenor, aux);
+            }
             contadorLento++;
         }
 
@@ -53,6 +58,5 @@ public class EquipoBaloncesto
 
         return listaJugadoresOrdenada;
     }
-    
-    
+
 }
